@@ -1,0 +1,22 @@
+.nav_phone
+  display: flex
+  align-items: center
+  flex-basis: 50%
+  justify-content: center
+  border-left: 1px solid #D9D9D9
+  transition: background .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @include media-breakpoint-down(lg)
+    border-left: none
+  &:hover
+    background: #202020
+    .header-phone
+      path 
+        fill: #fff
+
+.header-phone
+  width: 17.76px
+  height: 23.61px
+  path 
+    transition: fill .3s cubic-bezier(0.24, 0.4, 0, 1)
+
+  

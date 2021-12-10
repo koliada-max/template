@@ -1,0 +1,59 @@
+.responsive-grid
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 40px
+  background: #202020
+  @include media-breakpoint-down(xxl)
+    background: #2ecc71
+  @include media-breakpoint-down(xl)
+    background: #3498db
+  @include media-breakpoint-down(lg)
+    background: #9b59b6
+  @include media-breakpoint-down(md)
+    background:#e74c3c
+  @include media-breakpoint-down(sm)
+    background: #e67e22
+
+
+.responsive-item  
+  color: #fff
+  font-size: 16px
+
+.responsive-item__xxxl
+  display: block
+  @include media-breakpoint-down(xxl)
+    display: none
+
+.responsive-item__xxl
+  display: none
+  @include media-breakpoint-down(xxl)
+    display: block
+  @include media-breakpoint-down(xl)
+    display: none
+
+.responsive-item__xl
+  display: none
+  @include media-breakpoint-down(xl)
+    display: block
+  @include media-breakpoint-down(lg)
+    display: none
+
+.responsive-item__lg
+  display: none
+  @include media-breakpoint-down(lg)
+    display: block
+  @include media-breakpoint-down(md)
+    display: none
+
+.responsive-item__md
+  display: none
+  @include media-breakpoint-down(md)
+    display: block
+  @include media-breakpoint-down(sm)
+    display: none
+
+.responsive-item__sm
+  display: none
+  @include media-breakpoint-down(sm)
+    display: block

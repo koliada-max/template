@@ -1,0 +1,36 @@
+.nav_order
+  display: flex
+  justify-content: center
+  flex-basis: 61%
+  border-left: 1px solid #D9D9D9
+  transition: background .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @include media-breakpoint-down(md)
+    display: none
+  &:hover
+    background: #202020
+    .header-order__title
+      color: #fff
+    .header-order__icon
+      transform: rotate(90deg)
+      rect
+        fill: #fff
+
+
+.header-order__icon
+  display: none
+  transition: transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+  rect
+    transition: fill .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @include media-breakpoint-down(lg)
+    display: block
+
+.header-order__title
+  font-size: 0.6875em
+  line-height: 11px
+  font-weight: 600
+  letter-spacing: 0.04em
+  color: $black
+  text-transform: uppercase
+  transition: color .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @include media-breakpoint-down(lg)
+    display: none

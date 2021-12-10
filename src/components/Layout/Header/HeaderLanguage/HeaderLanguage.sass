@@ -1,0 +1,30 @@
+.nav_lang
+  display: flex
+  flex-basis: 50%
+  justify-content: center
+  border-left: 1px solid $stroke
+  @include media-breakpoint-down(lg)
+    display: none
+
+.languages
+  display: flex
+  align-items: center
+  list-style: none
+  flex-direction: row
+  justify-content: space-around
+  white-space: nowrap
+  width: 70%
+
+.lang-link
+  font-weight: 600
+  text-transform: uppercase
+  color: $gray
+  transition: color .3s ease-in-out
+  font-size: 0.6875em
+  &:hover
+    color: $black
+
+.lang-links
+  &[aria-current="page"]
+    .lang-link
+      color: $black

@@ -1,0 +1,29 @@
+
+/////// Fonts ////////
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap')
+
+$main: 'Conthrax-example', 'Arial', sans-serif
+$text: 'Montserrat', sans-serif
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff')
+		// font-display: swap // Uncomment to initially display system fonts
+@include font('Conthrax-example', normal, 400, '../fonts/ConthraxRg-Regular/ConthraxRg-Regular.woff2')
+@include font('Conthrax-example', normal, 600, '../fonts/ConthraxSb/ConthraxSb.woff2')
+
+///////  Colors ///////
+
+$black: #303030
+$white: #EAE9E9
+$green: #657D48
+$gray: #808080
+$stroke: #C5C5C5
+
+
+
+

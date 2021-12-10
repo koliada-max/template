@@ -1,0 +1,55 @@
+@import './HeaderLanguage/HeaderLanguage'
+@import './HeaderContacts/HeaderContacts'
+@import './HeaderOrder/HeaderOrder'
+@import './Burger/Burger'
+
+.header
+  color: #303030
+  height: 100px
+  @include media-breakpoint-down(lg)
+    height: 90px
+  @include media-breakpoint-down(sm)
+    height: 70px
+  &__container
+    display: flex
+    height: 100%
+  &__logo
+    display: flex
+    align-items: center
+    flex-basis: 36%
+    @include media-breakpoint-down(lg)
+      flex-basis: 50%
+    
+
+.nav
+  display: flex
+  flex-basis: 64%
+  @include media-breakpoint-down(lg)
+    flex-basis: 50%
+  @include media-breakpoint-down(sm)
+    flex-wrap: nowrap
+    flex-basis: 50%
+  &__left
+    display: flex
+    flex-basis: 50%
+    height: 100%
+    @include media-breakpoint-down(lg)
+      flex-basis: 33%
+      justify-content: center;
+      border-left: 1px solid #D9D9D9
+    @include media-breakpoint-down(md)
+      flex-basis: 50%
+  &__right
+    display: flex
+    flex-basis: 50%
+    height: 100%
+    @include media-breakpoint-down(lg)
+      flex-basis: 67%
+    @include media-breakpoint-down(md)
+      flex-basis: 50%
+      border-left: 1px solid #D9D9D9
+      justify-content: center
+
+.header-logo
+  @include media-breakpoint-down(sm)
+      width: 110px
