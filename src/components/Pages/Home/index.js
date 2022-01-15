@@ -1,2 +1,9 @@
-// export { default as HomeMainScreen } from './HomeMainScreen/HomeMainScreen';
-
+export { default as HomeMain } from './HomeMain/HomeMain';
+export { default as HomeOrderSection } from './HomeOrderSection/HomeOrderSection';
+export { default as HomeBenefitsSection } from './HomeBenefitsSection/HomeBenefitsSection';
+export { default as HomeCatalog } from './HomeCatalog/HomeCatalog';
+export { default as HomeVideoSection } from './HomeVideoSection/HomeVideoSection';
+export { default as HomeAbout } from './HomeAbout/HomeAbout';
+export { default as HomePartners } from './HomePartners/HomePartners';
+export { default as HomeSteps } from './HomeSteps/HomeSteps';
+export { default as HomeGalery } from './HomeGalery/HomeGalery';

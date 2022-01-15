@@ -6,6 +6,8 @@
 @import '../components/Layout/layout'
 
 @import '../components/Ui/Responsive/Responsive'
+@import '../components/Pages/Home/Home'
+@import '../components/Pages/ProductCard/ProductCard'
 
 
 
@@ -33,6 +35,8 @@ body
   font-family: $main
   background: $white
   color: $black
+  margin: 0
+  padding: 0
 
 
 ul
@@ -45,6 +49,7 @@ button
   background-color: transparent
   border: none
   outline: none
+  padding: 0
   &:focus, &:focus, &:active
     outline: none
 
@@ -59,14 +64,23 @@ p
 
 .page-wrapper
   width: 100%
-  max-width: 1920px
+  max-width: $page-width
   margin: 0 auto
-  padding: 0 6%
+  padding-left: 90px
+  padding-right: 90px
+  padding-top: 80px
+  padding-bottom: 80px
+  @media screen and ( max-width: $page-width )
+    padding-left: calc( 20px + (90 - 20) * ((100vw - 320px) / (1440 - 320)))
+    padding-right: calc(20px + (90 - 20) * ((100vw - 320px) / (1440 - 320)))
+    padding-top: calc( 60px + (80 - 60) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: calc( 60px + (80 - 60) * ((100vw - 320px) / (1440 - 320)))
+
 
 
 .content-wrapper
   width: 100%
-  max-width: 1920px
+  max-width: $page-width
   margin: 0 auto
   padding: 0 11%
   @include media-breakpoint-down(xl)

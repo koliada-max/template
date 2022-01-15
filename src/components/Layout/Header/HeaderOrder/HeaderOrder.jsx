@@ -9,7 +9,7 @@ const HeaderOrder = () => {
 
   return (
     <div className="nav_order">
-      <button className="modal-order">
+      <button className="modal-order" aria-label="Order furniture">
         <span className="header-order__title">
           {langToggle('Замовити меблі', 'Заказать мебель', 'Order furniture')}
         </span>

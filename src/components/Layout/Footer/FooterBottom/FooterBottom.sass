@@ -1,0 +1,31 @@
+.footer-bottom
+  display: flex
+  height: 120px
+  &__end
+    display: flex
+    justify-content: space-between
+    height: 130px
+    align-items: center
+    @include media-breakpoint-down(lg)
+      @include flex-center
+      flex-direction: column
+      .footer-bottom__nunox-container
+        padding-top: 15px
+    @include media-breakpoint-down(md)
+      border-bottom: 1px solid $border
+      border-left: 1px solid $border
+      border-right: 1px solid $border
+  &__copy-container
+    font-family: $text
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 12px
+    text-transform: uppercase
+    color: $dark-gray
+  
+.footer-bottom__nunox-link
+  &:hover
+    svg
+      transform: scale(1.1)
+      transition: transform 200ms ease-in-out

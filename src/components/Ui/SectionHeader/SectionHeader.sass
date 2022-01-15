@@ -1,0 +1,93 @@
+.section-header
+  width: 100%
+  display: flex
+  align-items: flex-start
+  padding: 0px 0 80px 0
+  @include media-breakpoint-down(lg)
+    padding: 0
+  &__content
+    display: flex
+    flex-basis: 95.5%
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+      align-self: center
+      flex-basis: 75%
+      padding-left: 8%
+    @include media-breakpoint-down(md)
+      flex-basis: 85%
+      padding-left: 5%
+    @include media-breakpoint-down(sm)
+      flex-basis: 100%
+
+.section-header__wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-direction: row
+  @include media-breakpoint-down(lg)
+    border-left: 1px solid $border
+    border-top: 1px solid $border
+    border-right: 1px solid $border
+    height: 162px
+  @include media-breakpoint-down(md)
+    flex-direction: row
+    height: 122px
+  @include media-breakpoint-down(sm)
+    height: 139px
+
+.header__description
+  flex-basis: 50%
+  font-family: $main
+  font-style: normal
+  font-weight: normal
+  font-size: 11px
+  line-height: 3
+  text-transform: uppercase
+  color: $black
+  @include media-breakpoint-down(lg)
+    color: $gray
+  @include media-breakpoint-down(md)
+    width: 100%
+
+
+.header__description-count
+  flex-basis: 5%
+  font-family: $main
+  font-style: normal
+  font-weight: normal
+  font-size: 0.6875em
+  line-height: 3
+  text-transform: uppercase
+  color: $gray
+  @include media-breakpoint-down(lg)
+    flex-basis: 25%
+    border-right: 1px solid $border
+    height: 100% 
+    font-size:  1.25em
+    color: $black
+    @include flex-center()
+  @include media-breakpoint-down(md)
+    font-size: 1em
+    flex-basis: 15%
+  @include media-breakpoint-down(sm)
+    display: none
+
+.header__title
+  flex-basis: 54%
+  font-size: 30px
+  line-height: 35px
+  letter-spacing: -0.01em
+  text-transform: uppercase
+  font-weight: 400
+  white-space: pre-line
+  padding-right: 40px
+  @include media-breakpoint-down(lg)
+    padding-top: 1%
+  @include media-breakpoint-down(md)
+    width: 100%
+    padding-right: 20px
+  @include media-breakpoint-down(xl)
+    padding-right: 30px
+  @media screen and ( max-width: $page-width )
+      font-size: calc( 13px + (30 - 13) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(18px + (35 - 18) * ((100vw - 320px) / (1440 - 320)))

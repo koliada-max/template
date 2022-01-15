@@ -1,0 +1,51 @@
+.partners__slider
+  border: 1px solid $border
+  
+.partners__slide-image
+  width: 100%
+  height: 100%
+  background: $border
+ 
+.partners__slide-image__wrapper
+  flex-basis: 25%
+  height: 215px
+  padding: 40px
+  border-right: 1px solid $border
+  @include media-breakpoint-down(xl)
+    padding: 30px
+  @include media-breakpoint-down(md)
+    padding: 20px
+
+.button-content
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  transition: all .3s ease-in-out .05s
+  @include media-breakpoint-down(lg)
+    right: 50%
+    top: 50%
+    transform: translate(50%, -50%)
+
+.slick-active + .slick-active
+  .partners__slide-image__wrapper
+    @include media-breakpoint-down(lg)
+      border-right: none
+
+.slick-active
+  .partners__slide-image__wrapper
+    @include media-breakpoint-down(lg)
+      border-left: none
+    @include media-breakpoint-down(sm)
+      border-right: none
+
+.slick-active + .slick-active + .slick-active + .slick-active
+  .partners__slide-image__wrapper
+    @include media-breakpoint-down(xl)
+      border-right: none
+
+.slick-active + .slick-active + .slick-active + .slick-active
+  .partners__slide-image__wrapper
+    @include media-breakpoint-up(xxl)
+      border-right: none
+

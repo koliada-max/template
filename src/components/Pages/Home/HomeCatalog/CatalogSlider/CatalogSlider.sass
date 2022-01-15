@@ -1,0 +1,103 @@
+.catalog__slider
+  border: 1px solid $border
+
+.catalog__slide-image__wrapper
+  padding: 40px
+  border-bottom: 1px solid $border
+  border-right: 1px solid $border
+  @include media-breakpoint-down(xl)
+    padding: 30px
+  @include media-breakpoint-down(md)
+    padding: 20px
+
+.catalog__slide-image
+  &:hover
+    transform: scale(1.03)
+    transition: transform 200ms ease-in-out
+
+.catalog__slide-footer
+  text-align: center
+  border-right: 1px solid $border
+  height: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 40px
+  cursor: pointer
+  @include media-breakpoint-down(xl)
+    padding: 30px
+  @include media-breakpoint-down(md)
+    padding: 20px
+    flex-direction: column
+
+.up-catalog
+  width: 11px
+  height: 11px 
+
+.catalog__slider-title
+  cursor: pointer
+  font-style: normal
+  font-family: $main
+  font-weight: 600
+  font-size: 14px
+  line-height: 20px
+  text-transform: uppercase
+  color: $black
+  padding-right: 30px
+  @media screen and ( max-width: $page-width )
+    font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(20px + (20 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(md)
+    padding-right: 0
+
+.catalog__slider-price
+  cursor: pointer
+  font-style: normal
+  font-family: $main
+  font-weight: 600
+  font-size: 14px
+  line-height: 20px
+  text-transform: uppercase
+  color: $black
+  @media screen and ( max-width: $page-width )
+    font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(20px + (20 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(md)
+    color: $gray
+
+.catalog__slide-wrapper
+  cursor: pointer
+  &:hover
+    .catalog__slider-title,
+    .catalog__slider-price
+      color: $green
+
+.button-content
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  transition: all .3s ease-in-out .05s
+
+
+.slick-active + .slick-active
+  .catalog__slide-image__wrapper,
+  .catalog__slide-footer
+    @include media-breakpoint-down(lg)
+      border-right: none
+
+.slick-active
+  .catalog__slide-image__wrapper,
+  .catalog__slide-footer
+    @include media-breakpoint-down(lg)
+      border-left: none
+    @include media-breakpoint-down(sm)
+      border-right: none
+
+.slick-active + .slick-active + .slick-active
+  .catalog__slide-image__wrapper,
+  .catalog__slide-footer
+    @include media-breakpoint-down(xl)
+      border-right: none
+    @include media-breakpoint-up(xxl)
+      border-right: none

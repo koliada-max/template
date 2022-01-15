@@ -39,8 +39,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#FFEB35`,
-        theme_color: `#FFEB35`,
+        background_color: `#e9e7e8`,
+        theme_color: `#e9e7e8`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -75,6 +75,14 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-source-youtube-v2`,
+    //   options: {
+    //     channelId: ['<< Array of Youtube channelIDs>>', 'UCK8sQmJBp8GCxrOtXWBpyEA', 'UCK8sQmJBp8GCxrOtXWBpyXY'],
+    //     apiKey: '<< Add your Youtube api key here>>',
+    //     maxVideos: 50 // Defaults to 50
+    //   },
+    // },
     // {
     //   resolve: 'gatsby-plugin-sitemap',
     //   options: {

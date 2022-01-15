@@ -1,0 +1,47 @@
+@import './AboutText/AboutText'
+
+.about
+  width: 100%
+  border: 1px solid $border
+  &__container
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+  &__img-wrapper
+    flex-basis: 50%
+    width: 100%
+    padding: 40px
+    position: relative
+    @media screen and ( max-width: $page-width )
+      padding: calc( 15px + (40 - 15) * ((100vw - 320px) / (1440 - 320)))
+    @include media-breakpoint-down(lg)
+      border-bottom: 1px solid $border
+  &__image-text_title
+    font-family: $main
+    font-size: 50px
+    color: $white
+    font-style: normal
+    font-weight: 600
+    text-align: center
+    text-transform: uppercase
+    white-space: nowrap
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 25px + (50 - 12) * ((100vw - 320px) / (1440 - 320)))
+  &__image-text_description
+    font-family: $main
+    font-size: 14px
+    color: $white
+    font-style: normal
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+  &__image-text
+    @include absolute-center()
+  &__image
+    width: 100%
+    height: 100%
+    

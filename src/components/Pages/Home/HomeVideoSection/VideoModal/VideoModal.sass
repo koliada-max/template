@@ -1,0 +1,76 @@
+.video-modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  @include flex-center()
+  background: $dark-black
+  z-index: 1000
+  transform: translateY(-101%)
+  pointer-events: none
+  opacity: 0
+  
+
+
+
+
+.video-modal__wrapper
+  position: relative
+  width: 100%
+  max-width: 2560px
+  margin: 0 auto
+  height: 100vh
+  @include flex-center()
+
+.popup-close__button
+  position: absolute
+  top: 0
+  right: 0
+  width: 80px
+  height: 80px 
+  background: rgba(#fff, .1)
+  @include flex-center()
+  &:hover
+    .popup-close__button-icon
+      transform: rotate(180deg)
+
+.popup-close__button-icon
+  width: 16px
+  height: 16px
+  display: block
+  transition: transform .3s ease-in-out
+  svg
+    display: block
+    width: 100%
+    height: auto
+
+
+.react-player__wrapper
+  position: relative
+  display: inline-block
+  width: 80%
+  height: 80vh
+  transition: all .3s ease-in-out .2s
+  overflow: hidden
+  @include media-breakpoint-down(lg)
+    width: 100%
+    height: 100%
+
+
+.react-player__wrapper-black
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $dark-black
+
+.react-player__wrapper-white
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $white
+  transform: translateX(100%)

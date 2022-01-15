@@ -1,0 +1,32 @@
+.product-gallery__slider-wrapper
+  width: 50%
+  @include media-breakpoint-down(md)
+    width: 100%
+  
+.product-gallery__slider
+  width: 100%
+
+.product-slide__item-wrapper
+  padding: 40px 40px 0 40px
+  &:last-child()
+    padding-bottom: 40px
+  @include media-breakpoint-down(lg)
+    padding: 20px 20px 0 20px
+    &:last-child()
+      padding-bottom: 40px
+    &:first-child()
+      padding-top: 40px
+  @include media-breakpoint-down(md)
+    padding: 60px 0 0 0
+    &:last-child()
+      padding-bottom: 40px
+  @include media-breakpoint-down(sm)
+    padding: 35px 0 0 0
+    &:last-child()
+      padding-bottom: 35px
+
+.product-gallery__slider-wrapper
+  border-bottom: 1px solid $border
+  border-left: 1px solid $border
+  @include media-breakpoint-down(md)
+    border: none

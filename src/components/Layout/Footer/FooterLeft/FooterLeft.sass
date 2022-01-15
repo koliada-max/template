@@ -1,0 +1,110 @@
+.footer__item
+  width: 33.33%
+  display: flex
+  flex-direction: column
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
+  @include media-breakpoint-down(lg)
+    width: 100%
+    border-top: none
+
+.adress-content
+  @include media-breakpoint-down(lg)
+    display: flex
+    flex-direction: column
+    padding: 42px 0 
+    height: 211px
+    border-top: 1px solid $border
+
+.footer-left
+  &__wrapper
+    border-right: 1px solid $border
+    @include media-breakpoint-down(lg)
+      border-left: 1px solid $border
+  &__title-container
+    height: 120px
+    display: flex
+    align-items: center
+    border-bottom: 1px solid $border
+    @include media-breakpoint-down(lg)
+      border-top: 1px solid $border
+      border-bottom: none
+      @include flex-center() 
+  &__title
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 30px
+    text-transform: uppercase
+    color: $black
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 16px + (30 - 16) * ((100vw - 320px) / (1440 - 320)))
+  &__adress-wrapper
+    display: flex
+    align-items: center
+    justify-content: start
+    height: 237px
+    border-bottom: 1px solid $border
+    @include media-breakpoint-down(lg)
+      border: none
+      @include flex-center()
+  &__mail-container
+    height: 120px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    cursor: pointer
+    @include media-breakpoint-down(lg)
+      @include flex-center()
+  &__mail-item
+    display: flex
+    justify-content: start
+    align-self: center
+    align-items: center
+    height: 100%
+  &__mail-link_title
+    font-family: $text
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: $dark-gray
+    &:hover
+      color: $gray
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))
+
+.button-map
+  &__adress
+    padding-top: 32px
+    text-decoration: none
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 0.75em
+    color: $dark-gray
+    text-align: start
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid $dark-gray
+    padding-bottom: 6px
+  &__adress-top
+    text-decoration: none
+    font-family: $main
+    font-style: normal
+    font-weight: normal
+    font-size: 0.875em
+    color: $black
+    white-space: pre-line
+    text-align: start
+    &:hover
+      color: $gray
+    @include media-breakpoint-down(lg)
+      text-align: center
+
+.button-map__adress
+  &:hover
+    color: $gray
+  @include media-breakpoint-down(lg)
+      display: none
+      

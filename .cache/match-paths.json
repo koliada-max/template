@@ -8,6 +8,10 @@
         "matchPath": "/en/dev-404-page/"
     },
     {
+        "path": "/en/product-card/",
+        "matchPath": "/en/product-card/"
+    },
+    {
         "path": "/en/using-typescript/",
         "matchPath": "/en/using-typescript/"
     },
@@ -18,6 +22,10 @@
     {
         "path": "/ru/dev-404-page/",
         "matchPath": "/ru/dev-404-page/"
+    },
+    {
+        "path": "/ru/product-card/",
+        "matchPath": "/ru/product-card/"
     },
     {
         "path": "/ru/using-typescript/",

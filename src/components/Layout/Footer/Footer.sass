@@ -1,0 +1,15 @@
+@import './FooterBottom/FooterBottom'
+@import './FooterLeft/FooterLeft'
+@import './FooterCenter/FooterCenter'
+@import './FooterRight/FooterRight'
+
+.footer-main
+  width: 100%
+  display: flex
+  @include media-breakpoint-down(lg)
+    flex-direction: column
+
+footer
+  .page-wrapper
+    padding-top: 0 !important
+    padding-bottom: 0 !important

@@ -1,0 +1,142 @@
+.footer__social
+  @include flex-center()
+  @include media-breakpoint-down(lg)
+    order: 2
+    width: 50%
+  @include media-breakpoint-down(sm)
+    width: 100%
+
+footer__item
+  width: 33.33%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  @include media-breakpoint-down(lg)
+    width: 100%
+.footer-center
+  @include media-breakpoint-down(lg)
+    flex-direction: row
+    flex-wrap: wrap
+
+.footer__social
+  height: 120px
+
+.footer__messangers
+  display: flex
+  height: 120px
+  @include media-breakpoint-down(lg)
+    border-top: 1px solid $border
+    order: 3
+    width: 50%
+  @include media-breakpoint-down(sm)
+    width: 100%
+
+.footer__phones
+  @include media-breakpoint-down(lg)
+    border-left: 1px solid $border
+    width: 100%
+    order: 1
+    padding: 40px 0
+
+.hover-class
+  @include hover-social()
+
+.social-center
+  &__instagramm
+    @include flex-center()
+    flex-basis: 33.33%
+    border-right: 1px solid $border
+    height: 100%
+    cursor: pointer
+  &__instagramm-icon
+    width: 23.94px
+    height: 24px
+  &__pinterest
+    flex-basis: 33.33%
+    @include flex-center()
+    border-right: 1px solid $border
+    height: 100%
+    cursor: pointer
+  &__pinterest-icon
+    width: 23.94px
+    height: 24px
+  &__facebook
+    flex-basis: 33.33%
+    @include flex-center()
+    height: 100%
+    cursor: pointer
+    @include media-breakpoint-down(lg)
+      border-right: 1px solid $border 
+    @include media-breakpoint-down(sm)
+      border-right: none
+  &__facebook-icon
+    width: 23.94px
+    height: 24px
+  &__telegram
+    flex-basis: 33.33%
+    @include flex-center()
+    border-right: 1px solid $border
+    height: 100%
+    cursor: pointer
+    @include media-breakpoint-down(sm)
+      border-left: 1px solid $border
+  &__telegram-icon
+    width: 23.94px
+    height: 24px
+  &__viber
+    flex-basis: 33.33%
+    @include flex-center()
+    border-right: 1px solid $border
+    height: 100%
+    cursor: pointer
+  &__viber-icon
+    width: 23.94px
+    height: 24px
+  &__whatsapp
+    flex-basis: 33.33%
+    @include flex-center()
+    height: 100%
+    cursor: pointer
+  &__whatsapp-icon
+    width: 23.94px
+    height: 24px
+
+.footer-center
+  display: flex
+  border-right: 1px solid $border
+  &__fones-wrapper
+    @include flex-center()
+    flex-direction: column
+    height: 237px
+  &__fones-content
+    flex-basis: 33.33%
+    @include flex-center()
+    flex-direction: row
+    height: 100%
+    border-bottom: 1px solid $border
+    width: 100%
+    cursor: pointer
+    @include media-breakpoint-down(lg)
+      border-bottom: none
+  &__contacts-item_link-title
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 0.875em
+    text-align: center
+    text-transform: uppercase
+    color: $black
+    &:hover
+      color: $gray
+
+.footer-center__social-top
+  @include media-breakpoint-down(lg)
+    border-left: 1px solid $border
+
+.in-text
+  display: none
+  color: $white
+  font-size: 14px
+  @media screen and ( max-width: $page-width )
+    font-size: calc( 11px + (14 - 11) * ((100vw - 320px) / (1440 - 320)))
+    

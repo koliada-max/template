@@ -1,0 +1,1 @@
+export { default as ProductCardMain } from './ProductCardMain/ProductCardMain';

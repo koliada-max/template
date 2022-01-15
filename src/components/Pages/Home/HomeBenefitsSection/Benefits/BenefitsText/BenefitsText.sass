@@ -1,0 +1,60 @@
+.benefitText__text-section
+  flex-basis: 50%
+  @include media-breakpoint-down(lg)
+    padding: 0
+    border-top: 1px solid $border
+.text-section
+  &__counts-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    height: 25%
+    width: 100%
+    border-bottom: 1px solid $border
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+      padding-bottom: 5%
+      padding-top: 5%
+      height: 162px
+      @include flex-center()
+    @include media-breakpoint-down(sm)
+      height: 133px
+    &:hover
+      .text-section__count-data,
+      .text-section__count-text
+        color: $green
+  &__count-text
+    font-family: $main
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    color: $black
+    white-space: pre-line
+    display: flex
+    align-items: center
+    flex-basis: 65%
+    @include media-breakpoint-down(lg)
+      text-align: center
+      padding-top: 3%
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 13px + (16 - 13) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(18px + (20 - 18) * ((100vw - 320px) / (1440 - 320)))
+  &__count-data
+    font-family: $main
+    font-style: normal
+    font-weight: normal
+    font-size: 44px
+    line-height: 44px
+    text-transform: uppercase
+    color: $gray
+    display: flex
+    align-items: center
+    flex-basis: 35%
+    padding-left: 5%
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 30px + (44 - 30) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(30px + (44 - 30) * ((100vw - 320px) / (1440 - 320)))
+    @include media-breakpoint-down(lg)
+      padding-left: 0
+

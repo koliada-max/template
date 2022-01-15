@@ -1,0 +1,40 @@
+.stepsText__text-section
+  flex-basis: 50%
+
+.text-section__steps-data
+  font-family: $main
+  font-style: normal
+  font-weight: normal
+  font-size: 44px
+  line-height: 44px
+  text-transform: uppercase
+  color: $gray
+  display: flex
+  align-items: center
+  flex-basis: 25%
+  padding-left: 5%
+  @media screen and ( max-width: $page-width )
+    font-size: calc( 30px + (44 - 30) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(30px + (44 - 30) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    padding-left: 0
+
+.text-section__counts-wrapper
+  &:hover
+    .text-section__count-text,
+    .text-section__steps-data
+      color: $green
+  
+.last-step
+  @include media-breakpoint-down(lg)
+    border-bottom: none 
+  
+.first-step
+  @include media-breakpoint-down(lg)
+    &:nth-of-type(1)
+      border-top: 1px solid $border
+    &:nth-of-type(4)
+      border-bottom: none
+      
+
+// style in BenefitsText.sass

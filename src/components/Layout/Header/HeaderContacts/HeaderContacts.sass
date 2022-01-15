@@ -1,14 +1,13 @@
 .nav_phone
-  display: flex
-  align-items: center
+  @include flex-center()
   flex-basis: 50%
-  justify-content: center
   border-left: 1px solid #D9D9D9
   transition: background .3s cubic-bezier(0.24, 0.4, 0, 1)
   @include media-breakpoint-down(lg)
     border-left: none
+    flex-basis: 100%
   &:hover
-    background: #202020
+    background: $dark-black
     .header-phone
       path 
         fill: #fff

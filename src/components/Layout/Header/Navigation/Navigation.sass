@@ -1,0 +1,357 @@
+.navigation
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: $white
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  padding: 0 6%
+  z-index: 100
+  transform: translateY(-100%)
+  pointer-events: none
+  opacity: 0
+  @include media-breakpoint-down(md)
+  &__wrapper
+    width: 100%
+    max-width: 1920px
+    height: 100%
+    display: flex
+    flex-direction: column
+  &__header
+    display: flex
+    justify-content: space-between
+    height: 100px
+    border-bottom: 1px solid $border
+    flex-shrink: 0
+  &__header-logo
+    flex-basis: 50%
+    border-right: 1px solid $border
+    height: 100%
+    display: flex
+    align-items: center
+    @include media-breakpoint-down(lg)
+      border-right: none
+  &__header-close
+    flex-basis: 50%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: end
+  &__menu-wrapper
+    display: flex
+    align-items: stretch
+    flex-basis: 50%
+    height: calc(100vh - 200px)
+    width: 100%
+    border-bottom: 1px solid $border
+    overflow-y: auto
+    scrollbar-gutter: stable
+    flex-grow: 1
+    @include media-breakpoint-down(lg)
+      flex-basis: 100%
+      padding-top: 40px
+      justify-content: center
+      height: 100%
+      border-bottom: none
+    @include media-breakpoint-down(sm)
+      height: calc(100vh - 160px)
+      align-items: center
+  &__image-section
+    flex-basis: 50%
+    border-right: 1px solid $border
+    max-width: 100%
+    margin: 0 auto
+    width: 50%
+    height: 100%
+    overflow: hidden
+    @include flex-center()
+    @include media-breakpoint-down(lg)
+      display: none
+  &__image
+    // width: 100%
+    // height: 100%
+  &__menu-section
+    flex-basis: 50%
+    height: 100%
+    width: 100%
+    @include media-breakpoint-down(lg)
+      flex-basis: 100%
+  &__menu
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin: 0 auto
+    overflow-y: auto
+    scrollbar-gutter: stable
+    padding-left: 120px
+    &::-webkit-scrollbar
+      width: 1px
+    &::-webkit-scrollbar-track
+      background: $border
+    &::-webkit-scrollbar-thumb 
+      background: $gray
+      width: 3px
+    @include media-breakpoint-down(sm)
+      justify-content: center
+      height: auto
+    @include media-breakpoint-down(lg)
+      width: 100% 
+      padding: 40px 0
+      justify-content: flex-start
+  &__menu-item
+    transform: translateY(-50px)
+    opacity: 0
+    height: 44px
+    @include media-breakpoint-down(xl)
+    height: 41px
+    @include media-breakpoint-down(lg)
+      height: 76px
+      border-top: 1px solid $border
+      border-left: 1px solid $border
+      border-right: 1px solid $border
+      &:last-child
+        border-bottom: 1px solid $border
+    @include media-breakpoint-down(md)
+      height: 70px
+    @include media-breakpoint-down(sm)
+      height: 60px
+  &-link
+    &__icon
+      display: none
+      @include media-breakpoint-down(lg)
+        display: block
+        border-left: 1px solid $border
+        width: 118px
+        height: 100%
+        @include flex-center()
+      @include media-breakpoint-down(md)
+        width: 86px
+      @include media-breakpoint-down(sm)
+        width: 70px
+  &__footer
+    display: flex
+    justify-content: space-between
+    height: 100px
+    flex-shrink: 0
+    @include media-breakpoint-down(lg)
+      display: none
+  &__footer-left
+    flex-basis: 50%
+    border-right: 1px solid $border
+    height: 100%
+    width: 100%
+  &__footer-left
+    flex-basis: 50%
+    height: 100%
+    width: 100%
+  &__language
+    width: 100%
+    height: 60px
+    flex-basis: 50%
+    overflow: hidden
+    @include flex-center()
+    display: none
+    @include media-breakpoint-down(lg)
+      display: block
+    &-list
+      display: flex
+      align-items: center
+      list-style: none
+      flex-direction: row
+      justify-content: space-around
+      white-space: nowrap
+      width: 100%
+      height: 60px
+      border-top: 1px solid $border
+      border-right: 1px solid $border
+      border-bottom: 1px solid $border
+      opacity: 0
+      transform: translateY(-100%)
+    &-item
+      width: 237px
+      height: 58px
+      border-left: 1px solid $border
+      @include flex-center()
+      &:hover
+        background: $green
+        .navigation__language-link
+          color: $white
+    &-links
+      @include flex-center()
+      width: 100%
+      height: 100%
+    &-link
+      font-family: $main
+      font-weight: 600
+      text-transform: uppercase
+      color: $gray
+      transition: color .3s ease-in-out
+      font-size: 0.875em
+      &:hover
+        color: $black
+  &__button
+    width: 100%
+    height: 100%
+    background: $green
+    opacity: 0
+    transform: translateY(-100%)
+    &-container
+      height: 97px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      display: none
+      overflow: hidden
+      margin-bottom: 40px
+      @include media-breakpoint-down(md)
+        display: block
+      @include media-breakpoint-down(sm)
+        width: 100%
+        height: 77px
+    &-text
+      font-family: $main
+      font-weight: 600
+      text-transform: uppercase
+      color: $white
+      transition: color .3s ease-in-out
+      font-size: 0.875em
+      letter-spacing: 0.04em
+      padding-right: 29px
+      @include media-breakpoint-down(sm)
+        font-size: 0.75em
+
+.count-item
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  @include media-breakpoint-down(lg)
+    justify-content: space-between
+  
+.menu__item-link
+  width: 100%
+  display: flex
+  align-items: flex-end
+  justify-content: flex-start
+  text-decoration: none
+  transition: all .2s ease-in-out
+  flex-wrap: nowrap 
+  height: 100%
+
+.menu__item-link_count
+  font-family: $main
+  display: block
+  margin-right: 25px
+  font-size: 12px
+  line-height: 36px
+  font-weight: normal
+  color: $gray
+  transition: all .2s ease-in-out
+  width: 25px
+  @include media-breakpoint-down(lg)
+    width: 119px
+    margin-right: 0
+    border-right: 1px solid $border
+    height: 100%
+    font-size: 18px
+    line-height: 35px
+    @include flex-center()
+  @include media-breakpoint-down(md)
+    width: 86px
+    font-size: 16px
+  @include media-breakpoint-down(sm)
+    display: none
+
+.menu__item-link_title
+  font-family: $main
+  display: block
+  font-size: 24px
+  line-height: 36px
+  font-weight: normal
+  color: $black
+  text-transform: uppercase
+  transition: all .2s ease-in-out
+  flex-wrap: nowrap
+  @include media-breakpoint-down(lg)
+    font-size: 18px
+    line-height: 35px
+  @include media-breakpoint-down(md)
+    font-size: 16px
+  @include media-breakpoint-down(sm)
+    font-size: 12px
+    padding-left: 22px
+    line-height: 35px
+    letter-spacing: -0.02em
+    @include flex-center()
+
+.menu__item-link
+  &:hover
+    .menu__item-link_title, 
+      color: $green
+    .menu__item-link_count
+      color: $green
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $dark-black
+  opacity: 0
+
+.navigation__language-item [aria-current="page"]
+  background: $green
+  
+.navigation__language-links 
+  &[aria-current="page"]
+    .navigation__language-link
+      color: $white
+
+img
+  object-fit: cover !important
+
+.navigation__content-cover--overflow
+  height: 50%
+  width: 100%
+  transform: scale(1.5)
+  opacity: 0
+  flex-basis: 50%
+
+.navigation__close
+  position: relative  
+  display: flex
+  align-items: center
+  justify-content: end
+  width: 100px
+  padding: 0
+  cursor: pointer
+  background: $white
+  height: 100%
+  @include media-breakpoint-down(sm)
+    width: 25%
+    height: 100%
+    border-left: transparent
+    border-bottom: transparent
+  &:hover
+    .close__button-icon
+      transform: rotate(180deg)
+
+.close__button-icon
+  width: 20px
+  height: 20px
+  display: block
+  transition: transform .3s ease-in-out
+  svg
+    display: block
+    width: 100%
+    height: auto
+    path
+      fill: $black
+

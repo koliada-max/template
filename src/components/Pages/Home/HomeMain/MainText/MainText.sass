@@ -1,0 +1,78 @@
+.text-section
+  &__count-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include media-breakpoint-down(lg)
+      display: none
+  &__counts-data
+    display: inline-block
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 28px
+    text-transform: uppercase
+    color: $black
+    @include media-breakpoint-down(lg)
+      display: none
+  &__counts-text
+    display: inline-block
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 10px
+    text-transform: uppercase
+    color: $dark-gray
+    @include media-breakpoint-down(lg)
+      display: none
+  &__description-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include media-breakpoint-down(lg)
+      @include flex-center()
+    &_descr
+      padding-top: 97px
+      @include media-breakpoint-down(lg)
+        padding-top: 0
+    &_title
+      padding-top: 34px
+      @media screen and ( max-width: $page-width )
+        padding-top: calc( 25px + (34 - 25) * ((100vw - 320px) / (1440 - 320)))
+  &__description
+    white-space: pre-line
+    font-family: $text
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    color: $dark-gray
+    @include media-breakpoint-down(lg)
+      display: inline-block
+      text-align: center
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 14px + (15 - 14) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)))
+  &__title
+    white-space: pre-line
+    font-family: $main
+    font-style: normal
+    font-weight: 400
+    font-size: 70px
+    line-height: 1.1
+    color: $black
+    @include media-breakpoint-down(lg)
+      display: inline-block
+      text-align: center
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 20px + (55 - 20) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(25px + (60 - 25) * ((100vw - 320px) / (1440 - 320)))
+
+.home-main__text-section
+  display: flex
+  flex-direction: column
+  padding-bottom: 30px
+  @include media-breakpoint-down(lg)
+    z-index: 1
+  @media screen and ( max-width: 767px )
+    padding-top: 50px

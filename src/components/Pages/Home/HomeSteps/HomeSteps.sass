@@ -1,0 +1,54 @@
+@import './StepsText/StepsText'
+
+
+
+.steps
+  height: 100%
+  &__container
+    display: flex
+    border: 1px solid $border
+    width: 100%
+    border-bottom: none
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+      border-bottom: 1px solid $border
+  &__content-wrapper
+    padding: 40px
+    border-right: 1px solid $border
+    border-bottom: 1px solid $border
+    flex-basis: 50%
+    @include media-breakpoint-down(lg)
+      flex-basis: auto
+      border-bottom: none
+    @media screen and ( max-width: $page-width )
+      padding: calc( 14px + (40 - 14) * ((100vw - 320px) / (1440 - 320)))
+  &__content
+    width: 100%
+    height: 100%
+    background: $green
+    @include flex-center()
+    flex-direction: column
+    height: 473px
+    @media screen and ( max-width: $page-width )
+      height: calc( 161px + (473 - 161) * ((100vw - 320px) / (1440 - 320)))
+  &__content-title
+    font-family: $main
+    font-style: normal
+    font-weight: 600
+    font-size: 50px
+    text-align: center
+    text-transform: uppercase
+    color: $white
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 25px + (50 - 25) * ((100vw - 320px) / (1440 - 320)))
+  &__content-description
+    font-family: $main
+    font-style: normal
+    font-weight: normal
+    font-size: 14
+    line-height: 18px
+    text-align: center
+    color: rgba(234, 233, 233, 0.7)
+    white-space: pre-line
+    @media screen and ( max-width: $page-width )
+      font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))

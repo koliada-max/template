@@ -7,7 +7,7 @@ const HeaderLanguage = () => {
   
   return (
     <div className="nav_lang">
-      <ul class="languages">
+      <ul className="languages">
         {languages.map((lng) => (
           <li key={lng} className="lang-item">
             <Link className="lang-links" to={originalPath} language={lng}>
